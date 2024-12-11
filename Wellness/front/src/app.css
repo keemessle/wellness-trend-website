@@ -1,0 +1,82 @@
+* {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./assets/img/Background.jpg');
+}
+
+
+.App {
+  display: grid;
+  grid-template-rows: 80px auto; 
+  grid-template-columns: 270px auto; 
+  grid-template-areas:
+      "sidebar topbar"
+      "sidebar container";
+  height: 100%; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  /* background-color: red; 색상 확인용 */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding: 10px;
+}
+
+.topbar {
+  grid-area: topbar;
+  /* background-color: blue; 색상 확인용 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+
+.container {
+  grid-area: container;
+  /* background-color: green;  */
+  overflow: auto; 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+@font-face {
+  font-family: 'ClimateCrisisKR-1979';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/ClimateCrisisKR-1979.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: "Avigea";
+  src: url("./assets/fonts/Avigea.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "CoolveticaRg-Bold";
+  src: url("./assets/fonts/CoolveticaRg-Bold.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+

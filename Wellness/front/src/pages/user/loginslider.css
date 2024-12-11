@@ -1,0 +1,332 @@
+/* 전체 컨테이너 스타일 */
+.slider-container {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 오버레이 ------------------------------------------------ */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: all 0.6s ease-in-out;
+}
+
+
+.overlay-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    transition: opacity 0.6s ease, visibility 0.6s ease,transform 0.6s ease;
+}
+
+/* 숨김 처리 */
+.overlay-panel.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* 왼쪽 오버레이 */
+.overlay-panel.overlay-left {
+    width: 100%;
+    height: auto;
+    background-color: #1D1D1D;
+    color: white;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* 오른쪽 오버레이 */
+.overlay-panel.overlay-right {
+    width: 100%;
+    height: auto;
+    background-color: #77D098;
+    color: #1f1f1f;
+    z-index: 15; /* 적절히 높게 설정 */
+    transform: translateX(50);
+}
+
+/* 항상 보이는 상태 */
+.overlay-panel:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateX(0);
+}
+
+
+.overlay-panel h3 {
+    width: 100%;
+    height: auto;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+    background-color: transparent;
+}
+
+.overlay-panel p {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    padding: 30px;
+    background-color: transparent;
+}
+
+.overlay-left .btn.transparent { 
+    height: auto;
+    border: 3px solid #C5EB64;    
+    color: #C5EB64;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 13px 70px;
+    margin: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.overlay-right .btn.transparent {
+    height: auto;
+    border: 3px solid #1D1D1D;
+    color: #1D1D1D;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 13px 70px;
+    margin: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.overlay-left .btn.transparent:hover {
+    background-color: #C5EB64;
+    box-shadow: 0px 0px 15px rgba(225, 254, 142, 0.3);
+    color: #070707;
+    font-weight: bold;
+}
+
+.overlay-right .btn.transparent:hover {
+    background-color: #1D1D1D;
+    box-shadow: 0px 0px 15px rgba(60, 40, 50, 0.6);
+    color: #C5EB64;
+    font-weight: bold;
+}
+
+
+
+/* 입력폼 컨테이너 -------------------------------------------- */
+.forms-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    visibility: hidden; 
+    opacity: 0;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.forms-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sign-in-container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+    background-color: #1D1D1D;
+}
+
+.sign-up-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+    transform: translateX(100%); 
+    background-color: #77D098;
+}
+
+.active .sign-in-container,
+.active .sign-up-container {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sign-in-form {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.sign-up-form {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+    text-align: center;
+    color: #1D1D1D;
+}
+
+.sign-in-form h3,
+.sign-up-form h3 {
+    width: 100%;
+    height: auto;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+    background-color: transparent;
+}
+
+.sign-in-form input {
+    width: 70%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+    background-color: transparent;
+    color: #ddd;
+}
+
+.sign-up-form input {
+    width: 70%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: 1px solid #1D1D1D;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.1s ease-in-out;
+    background-color: transparent;
+    color: #1D1D1D;
+}
+
+.sign-in-form input:focus {
+    outline: none;
+    border-color: #C5EB64;
+}
+
+.sign-up-form input:focus {
+    outline: none;
+    border-color: #C5EB64;
+}
+
+.sign-in-form .btn {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 13px 70px;
+    margin: 30px 0;
+    border-radius: 30px;
+    border: 3px solid #C5EB64;
+    background-color: transparent;
+    color: #C5EB64;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up-form .btn {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 13px 70px;
+    margin: 30px 0;
+    border-radius: 30px;
+    border: 3px solid #1D1D1D;
+    background-color: transparent;
+    color: #1D1D1D;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-form .btn:hover {
+    background-color: #C5EB64;
+    box-shadow: 0px 0px 15px rgba(225, 254, 142, 0.3);
+    color: #070707;
+    font-weight: bold;
+}
+
+.sign-up-form .btn:hover {
+    background-color: #1D1D1D;
+    border-color: #1D1D1D;
+    /* box-shadow: 0px 0px 15px rgba(225, 254, 142, 0.6); */
+    box-shadow: 0px 0px 15px rgba(60, 40, 60, 0.6);
+    color: #C5EB64;
+    font-weight: bold;
+}
+
+.error-message {
+    width: 100%;
+    height: auto;
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        grid-template-columns: 1fr;
+    }
+
+    .overlay-panel.overlay-left,
+    .overlay-panel.overlay-right {
+        flex-direction: column;
+    }
+}

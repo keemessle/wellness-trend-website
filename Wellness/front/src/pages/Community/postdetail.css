@@ -1,0 +1,140 @@
+.post-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 20px;
+    color: #333;
+    /* background-color: #ddd; */
+    border: 3px solid rgba(31, 31, 31, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 제목 스타일 */
+.post-detail-container h1 {
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+    color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 작성자, 조회수 */
+.post-meta {
+    width: 100%;
+    height: auto;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 본문 스타일 */
+.post-content {
+    padding: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    width: 100%; 
+    height: auto;
+    box-sizing: border-box; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: #f0f0f0;
+    border-top: 3px solid rgba(31, 31, 31, 0.3);
+    border-bottom: 3px solid rgba(31, 31, 31, 0.3);
+    border-radius: 20px;
+
+}
+/* 생성일 스타일 */
+.post-date {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    padding: 20px;
+}
+
+/* 버튼 스타일 */
+.post-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+.like-button {
+    width: 100%;
+    padding: 10px;
+    color: #f44336;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: color 0.3s ease;
+    
+}
+
+.like-button:hover {
+    color: #d32f2f;
+}
+
+
+.edit-button,
+.delete-button {
+    width: 50px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button {
+    background-color: rgba(31, 31, 31, 0.3);
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: rgba(31, 31, 31, 0.3);
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+
+
+.back-button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #666;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+

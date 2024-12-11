@@ -1,0 +1,81 @@
+.sidebar {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px; */
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0; 
+    border-radius: 30px;
+    color: white;
+    background-color: #1f1f1f;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.4);
+}
+
+
+.sidebarBrend {
+    width: 100%;
+    height: auto;
+    text-align: center; 
+    /* margin-top: 2rem; */
+    font-size: 3rem; 
+    font-family:  "Avigea";
+    color: #DAFF7C;
+    background-color: transparent;
+}
+
+
+
+
+.sidebarMenu {
+    width: 100%; /* 메뉴가 사이드바 너비에 맞게 설정 */
+    padding: 20px 0 0 20px;
+    background-color: transparent;
+}
+
+.sidebarMenu ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    width: 100%; /* 메뉴가 전체 너비를 차지하도록 설정 */
+    background-color: transparent;
+}
+
+.sidebarMenu li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 30px;
+    height: auto;
+    margin: 20px 0;
+    font-size: 1rem;
+    border-radius: 30px;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out; 
+}
+
+.sidebarMenu li.activate,
+.sidebarMenu li:hover {
+    border-radius: 30px 0px 0px 30px;
+    cursor: pointer;
+    color: #1f1f1f;
+    background-color: rgb(225, 254, 142);
+    box-shadow: 0px 0px 15px rgba(225, 254, 142, 0.3);
+}
+
+.sidebarIcon {
+    margin-right: 40px;
+    font-size: 20px !important;
+    background-color: transparent;
+}
+
+

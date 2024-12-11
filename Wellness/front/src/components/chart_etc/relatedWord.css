@@ -1,0 +1,37 @@
+.related-word {
+    flex: 2;
+    width: 100%;
+    height: 60%;
+}
+
+.related-word-title {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #aaaaaa;
+}
+
+.related-list {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 30px;
+    background-color: #1d1d1d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.word-cloud-chart {
+    width: 100%;
+    height: 100%; 
+    display: block; 
+    overflow: auto;
+    margin: 0 auto;
+}
+
+
