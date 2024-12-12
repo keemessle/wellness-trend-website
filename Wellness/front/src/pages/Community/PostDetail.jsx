@@ -1,5 +1,6 @@
+// jw
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams, useLocation } from "react-router-dom";
+import {useNavigate, useParams, useLocation} from "react-router-dom";
 import axios from "axios";
 import "./postdetail.css";
 import Comments from "./Comments";
@@ -41,7 +42,7 @@ const PostDetail = () => {
             }
         };
 
-        // console.log("현재 게시물 ID:", id);
+        console.log("현재 게시물 ID:", id); // 확인용 콘솔
         fetchPost();
     }, [id]);
 
@@ -99,6 +100,16 @@ const PostDetail = () => {
             <div className="post-date">
                 날짜: {post.createdAt}
             </div>
+
+            {/* 제목 및 작성자, 생성일 정보 */}
+            {/*<div className="post-header">*/}
+            {/*    <h1>{post.title}</h1>*/}
+            {/*    <div className="post-meta">*/}
+            {/*        <span>작성자: {post.name}</span>*/}
+            {/*        <span>생성일: {post.createdAt}</span>*/}
+            {/*        <span>조회수: {post.views}</span>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
 
             <button className="like-button" onClick={handleLike}>
                 ♥️ {post.likes}

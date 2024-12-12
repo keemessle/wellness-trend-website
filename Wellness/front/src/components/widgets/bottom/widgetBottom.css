@@ -1,60 +1,101 @@
 .related-video {
-
     width: 100%;
-    height: 50%;
+    height: 40%;
+    box-sizing: border-box;
     /* border: 5px solid burlywood; */
+    box-sizing: border-box;
+}
+
+
+.relate-video-container {
+    margin: 0 auto;
+
 }
 
 .video-title {
     width: 100%;
     height: auto;
     padding: 5px;
-    font-weight: bold;
     font-size: 0.9rem;
+    font-weight: bold;
     color: #aaaaaa;
-    background-color: transparent;
 }
 
-/* 비디오 리스트 스타일 */
+
 .video-list {
     width: 100%;
-    height: auto;
-    padding: 30px;
+    height: 90%; 
+    margin: 0 auto; 
+    padding: 30px 20px; /* 20으로 하면 버튼이 더 잘 보임 */
     box-sizing: border-box;
-    border-radius: 30px;
     background-color: rgba(148, 129, 255, 1);
+    border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+.video-player {
+    width: 100%; 
+    height: 200PX; 
+    margin: 0 auto; 
+}
 
-.video-item {
+.youtube-title {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333; 
+    text-align: center; 
+}
+
+
+.slick-slider {
     width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.slick-list {
+    overflow: hidden;
+    padding: 0 10px; 
+    box-sizing: border-box;
+}
+
+
+.slick-track {
     display: flex;
     align-items: center; 
-    padding: 20px 0;
-    flex-shrink: 0;
-    background-color: transparent;
+    transition: transform 0.5s ease;
 }
 
 
-.video-player {
+/* 얘부터 문제일 수 있음 */
+.slick-slide {
     width: 100%;
-    height: 75%;
+    margin: 0 auto;
+    position: relative;
+    border: none;
+    flex: 1 0 auto;
+    text-align: center;
 }
 
-/* 비디오 제목 */
-.youtube-title {
-    width: 100%;
-    height: 25%;
-    text-align: center;
-    max-width: 250px;
-    padding-top: 10px;
-    font-size: 13px;
-    font-weight: bold;
-    color: #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    background-color: transparent;
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    cursor: pointer;
 }
+
+
+.slick-prev {
+    left: -25px;
+}
+
+
+.slick-next {
+    right: -25px; 
+}
+
+

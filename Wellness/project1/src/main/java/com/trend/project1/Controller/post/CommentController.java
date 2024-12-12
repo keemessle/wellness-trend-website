@@ -50,6 +50,15 @@ public class CommentController {
         String sql = "INSERT INTO comments (post_id, parent_id, name, content, created_at) VALUES (?, ?, ?, ?, NOW())";
         jdbcTemplate.update(sql, comment.getPostId(), comment.getParentId(), comment.getName(), comment.getContent());
 
+        // 댓글 알림 //
+        String getPostOwnerSql = "SELECT name FROM posts WHERE id = ?";
+        String postOwner = jdbcTemplate.queryForObject(getPostOwnerSql, new Object[]{comment.getPostId()}, String.class);
+
+        if (!comment.getName().equals(postOwner)) { // 댓글 작성자와 게시물 작성자가 다를 경우 알림 생성
+            String insertNotificationSql = "INSERT INTO notifications (name, post_id, comment_id, content) VALUES (?, ?, LAST_INSERT_ID(), ?)";
+            jdbcTemplate.update(insertNotificationSql, postOwner, comment.getPostId(), "새로운 댓글이 달렸습니다!");
+        }
+
         return ResponseEntity.status(HttpStatus.CREATED).body("댓글 작성 완료!");
     }
 
@@ -82,7 +91,6 @@ public class CommentController {
         return ResponseEntity.ok("댓글 수정 완료!");
     }
 
-
     // 내가 쓴 댓글 불러오기 //
     @GetMapping("/user/{userid}")
     public ResponseEntity<List<Comment>> getUserComments(@PathVariable String userid) {
@@ -101,6 +109,5 @@ public class CommentController {
 
         return ResponseEntity.ok(comments);
     }
-
 
 }

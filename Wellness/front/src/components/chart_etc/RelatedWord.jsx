@@ -18,7 +18,7 @@ const RelatedWord = ({ keyword }) => {
             const response = await axios.get(`/api/related-keywords?keyword=${keyword}`);
             const data = response.data.map((word, index) => ({
                 text: word,
-                weight: Math.max(10, (10 - index) * 5), // 가중치 설정
+                weight: Math.max(30, (10 - index) * 5), // 가중치 설정
             }));
             setSuggestions(data);
         } catch (error) {

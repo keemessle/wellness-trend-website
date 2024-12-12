@@ -1,3 +1,4 @@
+// jw
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -19,7 +20,7 @@ const Topbar = () => {
     const handleSearch = async (e) => {
         e.preventDefault();
 
-        // console.log("검색어: ", searchTerm)
+        console.log("검색어: ", searchTerm) // 오류 확인
 
         // 검색어가 입력되지 않은 경우 처리
         if (!searchTerm || searchTerm.trim() === "") {
@@ -51,29 +52,27 @@ const Topbar = () => {
 
     const handleNotificationClick = async (id, postId) => {
         try {
-            await axios.put(`/api/notifications/${id}`);  // 알림 아이디 
+            await axios.put(`/api/notifications/${id}`); //알림 id
 
             // 읽음 처리 후, 알림 목록 업데이트
             setNotifications((prevNotifications) =>
                 prevNotifications.filter((notif) => notif.id !== id)
             );
-
             // 게시물 화면으로 이동
-            window.location.href = `/community/${postId}`;
+            window.location.href = `/community/${postId}`; // 게시물 id
         } catch (error) {
             console.error("알림 읽음 처리 실패:", error);
         }
     };
-
 
     return (
         <div className="topbar">
             <div className="topbar-container">
                 <div className="top-searchBar">
                     <form onSubmit={handleSearch}>
-                        <input 
-                            type="text" 
-                            placeholder="Search" 
+                        <input
+                            type="text"
+                            placeholder="Search"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
@@ -85,26 +84,26 @@ const Topbar = () => {
                     <FiMoon />
                     <RiNotification4Line onClick={toggleDropdown} style={{ cursor: "pointer" }}/>
                     {showDropdown && (
-                            <div className="notification-dropdown">
-                                {notifications.length > 0 ? (
-                                    notifications.map((notif) => (
-                                        <div key={notif.id} className="notification-item">
-                                            <p className="notification-content">{notif.content}</p>
-                                            <button
-                                                className="notification-button"
-                                                onClick={() => handleNotificationClick(notif.id, notif.post_id)}
-                                            >
-                                                보러가기
-                                            </button>
-                                        </div>
-                                    ))
-                                ) : (
-                                    <p className="no-notifications">알림이 없습니다.</p>
-                                )}
-                            </div>
-                        )}
+                        <div className="notification-dropdown">
+                            {notifications.length > 0 ? (
+                                notifications.map((notif) => (
+                                    <div key={notif.id} className="notification-item">
+                                        <p className="notification-content">{notif.content}</p>
+                                        <button
+                                            className="notification-button"
+                                            onClick={() => handleNotificationClick(notif.id, notif.post_id)}
+                                        >
+                                            보러가기
+                                        </button>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="no-notifications">알림이 없습니다.</p>
+                            )}
+                        </div>
+                    )}
                     <img src={imgLogo} alt="" className="topAvatar" onClick={handleLogoClick}
-                        style={{cursor:"pointer"}}/>
+                         style={{cursor:"pointer"}}/>
                 </div>
             </div>
         </div>

@@ -1,7 +1,8 @@
 .related-word {
     flex: 2;
     width: 100%;
-    height: 60%;
+    height: 50%;
+    /* border: 5px solid firebrick; */
 }
 
 .related-word-title {
@@ -15,7 +16,7 @@
 
 .related-list {
     width: 100%;
-    height: 90%;
+    height: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,10 +29,7 @@
 
 .word-cloud-chart {
     width: 100%;
-    height: 100%; 
-    display: block; 
-    overflow: auto;
-    margin: 0 auto;
+    height: 100%;
 }
 
 

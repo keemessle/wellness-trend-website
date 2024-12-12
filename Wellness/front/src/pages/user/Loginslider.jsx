@@ -50,6 +50,13 @@ export default function LoginSlider() {
             const response = await axios.post("http://localhost:8080/api/signup", { userid, password });
             if (response.status === 201) {
                 alert("회원가입 성공");
+
+                // 회원가입 성공 시 로그인 창으로 이동
+                setActiveForm("signin");
+                setUserid("");             // 입력 필드 초기화
+                setPassword("");
+                setConfirmPassword("");
+                setErrorMessage("");
             }
         } catch (error) {
             if (error.response && error.response.status === 409) {

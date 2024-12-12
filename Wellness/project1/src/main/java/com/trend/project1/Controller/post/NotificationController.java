@@ -1,3 +1,4 @@
+//jw
 package com.trend.project1.Controller.post;
 
 import org.springframework.http.HttpStatus;
@@ -21,13 +22,13 @@ public class NotificationController {
     // 알림 가져오기
     @GetMapping("/{userId}")
     public ResponseEntity<List<Map<String, Object>>> getNotifications(@PathVariable String userId) {
-        String sql = "SELECT id, name, content, is_read, created_at FROM notifications WHERE name = ? ORDER BY created_at DESC";
+        String sql = "SELECT id, name, content, post_id, is_read, created_at FROM notifications WHERE name = ? AND is_read = FALSE ORDER BY created_at DESC";
         List<Map<String, Object>> notifications = jdbcTemplate.queryForList(sql, userId);
         return ResponseEntity.ok(notifications);
     }
 
     // 알림 클릭했을 때 is_read True로 변경
-    @PutMapping("/notifications/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<String> markNotificationAsRead(@PathVariable Long id) {
         try {
             String sql = "UPDATE notifications SET is_read = TRUE WHERE id = ?";
