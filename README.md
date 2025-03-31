@@ -32,5 +32,6 @@
 
 
 ## **❣️ 결과 화면**
-![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3986ae26-982c-4be6-83ab-4cebb706a3fa)
+![home_sm-ezgif com-optimize](https://github.com/user-attachments/assets/1d98d667-b44c-4842-a2de-9cfe90177fe0)
+
 
