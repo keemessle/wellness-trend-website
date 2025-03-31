@@ -32,6 +32,5 @@
 
 
 ## **❣️ 결과 화면**
-
-
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/3986ae26-982c-4be6-83ab-4cebb706a3fa)
 
