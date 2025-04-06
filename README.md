@@ -32,6 +32,11 @@
 
 
 ## **❣️ 결과 화면**
-![home_sm-ezgif com-optimize](https://github.com/user-attachments/assets/1d98d667-b44c-4842-a2de-9cfe90177fe0)
+
+<img src="https://github.com/user-attachments/assets/1f9a2644-bf26-43b8-8ed7-d78f8c5f4250" alt="home" width="1200" />
+<div stlye="display: flex;">
+<img src="https://github.com/user-attachments/assets/146e3e7a-0412-42d2-b9c1-62f5e936e735" alt="signup" width="500" /><img src="https://github.com/user-attachments/assets/7cf189c3-0a47-4474-a5d9-f2d150b3905b" alt="signin" width="500" />
+
+
 
 
