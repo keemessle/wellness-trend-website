@@ -7,11 +7,17 @@
 
 ## **📌 프로젝트 요약**
 ✅ 건강 트렌드 분석 리포트
-  - 사용자의 검색어를 통해 네이버 API로 수집한 데이터들을 분석하여<br> 실시간 트렌드 리포트 자동 생성
-  - 그래표와 표로 대시보드를 구성하여 사용자가 데이터를 직관적으로<br> 이해할 수 있도록 설계
+  - 사용자의 검색어를 통해 네이버 API, 구글 API, 유튜브 API로 수집한 데이터들을 분석하여<br> 실시간 트렌드 리포트 자동 생성
+  - Chart.js를 활용하여 그래표와 표로 대시보드를 구성하여 사용자가 데이터를 직관적으로<br> 이해할 수 있도록 설계
 
-✅ SNS 연동 기능
-  - 트위터 API를 활용하여 건강 키워드와 관련된 실시간 SNS 데이터를<br> 사용자에게 시각화
+✅ 회원 전용 기능
+  - 회원가입 & 로그인 슬라이더 구현
+    - 페이지 이동을 하지 않고도 두 기능을 동시에 이용 가능
+    - 회원가입 완료시 자동으로 로그인 입력폼 생성
+  - 마이페이지(UserInfo) 기능
+    - 작성한 게시글, 댓글 조회
+    - 작성한 게시글에 댓글이 달리면 알림 띄우기
+    - 로그아웃 버튼을 이용하여 로그아웃 하기
 
 ✅ 사용자 소통 게시판 플랫폼
   - 건강 관련 키워드를 카테고리별로 분류
@@ -33,10 +39,7 @@
 
 ## **❣️ 결과 화면**
 
-<img src="https://github.com/user-attachments/assets/1f9a2644-bf26-43b8-8ed7-d78f8c5f4250" alt="home" width="1200" />
-<div stlye="display: flex;">
-<img src="https://github.com/user-attachments/assets/146e3e7a-0412-42d2-b9c1-62f5e936e735" alt="signup" width="500" /><img src="https://github.com/user-attachments/assets/7cf189c3-0a47-4474-a5d9-f2d150b3905b" alt="signin" width="500" />
-
+[Youtube](https://youtu.be/kS-WeAXI6u8)
 
 
 
